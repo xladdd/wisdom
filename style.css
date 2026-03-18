@@ -1,0 +1,177 @@
+:root {
+  color-scheme: light dark;
+
+  --bg: #fdf6e3;
+  --text: #657b83;
+  --h2: #0082c8;
+  --h3: #da3175;
+  --h4: #139e93;
+  --accent: #7a8e21;
+  --border: #eee8d5;
+}
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    --bg: #002b36;
+    --text: #839496;
+    --heading: #93a1a1;
+    --border: #073642;
+  }
+}
+
+body.dark {
+  --bg: #002b36;
+  --text: #839496;
+  --heading: #93a1a1;
+  --border: #073642;
+  --accent: #9d7220;
+}
+
+img {
+  width: 100%;
+}
+
+/* base */
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  padding: 40px 20px;
+  background: var(--bg);
+  color: var(--text);
+  font-family:
+    Space Grotesk,
+    system-ui,
+    sans-serif;
+  line-height: 1.6;
+}
+
+/* layout */
+.container {
+  max-width: 720px;
+  margin: 0 auto;
+}
+
+/* typography */
+h1,
+h2,
+h3 {
+  line-height: 1.25;
+}
+
+h1 {
+  text-align: center;
+  margin-top: 2rem;
+  font-size: 2rem;
+  color: #f7df9b;
+}
+
+h2 {
+  margin-top: 2rem;
+  font-size: 3rem;
+  font-weight: bold;
+  color: var(--h2);
+}
+
+h3 {
+  color: var(--h3);
+}
+
+h4 {
+  color: var(--h4);
+}
+
+p {
+  margin: 1rem 0;
+}
+
+mark {
+  background: #f7df9b; /* solarized yellow */
+  color: #002b36;
+  padding: 2px 4px;
+  border-radius: 3px;
+}
+
+/* links */
+a {
+  color: var(--accent);
+  text-decoration: none;
+}
+
+a:hover {
+  text-decoration: underline;
+}
+
+/* code */
+code {
+  background: var(--border);
+  padding: 2px 6px;
+  border-radius: 4px;
+  font-size: 0.9em;
+}
+
+pre {
+  background: var(--border);
+  padding: 16px;
+  overflow-x: auto;
+  border-radius: 6px;
+}
+
+/* shared block style (details + toc container) */
+details {
+  margin: 1rem 0;
+  border: 1px solid var(--border);
+  border-radius: 6px;
+  padding: 10px 14px;
+  background: var(--bg);
+}
+
+summary {
+  cursor: pointer;
+  font-weight: 600;
+  color: var(--h2);
+}
+
+summary:hover {
+  opacity: 0.8;
+}
+
+/* TOC */
+#toc {
+  font-size: 0.9rem;
+}
+
+#toc ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+#toc li {
+  margin: 4px 0;
+}
+#toc li.h2 {
+  margin-left: 10px;
+}
+#toc li.h3 {
+  margin-left: 20px;
+}
+
+/* button */
+#theme-toggle {
+  position: fixed;
+  top: 20px;
+  right: 20px;
+  background: var(--border);
+  color: var(--text);
+  border: none;
+  padding: 8px 12px;
+  cursor: pointer;
+  border-radius: 6px;
+}
+
+#theme-toggle:hover {
+  opacity: 0.8;
+}
