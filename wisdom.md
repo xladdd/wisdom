@@ -1,4 +1,95 @@
+## Resources
+### Evergreens
+🔗 [Wada Sanzo Colour Dictionary](https://www.wada-sanzo-colors.com/combinations/classic/all)
+
+🔗 [Google Material Design Icons](https://fonts.google.com/icons?icon.size=24&icon.color=%235f6368&icon.style=Rounded)
+
+🔗 [HTML to SVG](https://editsvgcode.com/)
+
+==Assets== [Mr. Mockup](https://mrmockup.com/) • [Pacdora](https://www.pacdora.com/) • []()
+
+### Inspo
+==General== [DIELINE](https://thedieline.com/) • [It’s Nice That](https://www.itsnicethat.com/) • [Packaging of the World](https://packagingoftheworld.com/)
+
+==Textbook== [Fraus](https://ucebnice.fraus.cz/catalog/cs/p9940.html) • [Baobab](https://www.baobab-books.net/) • [Meander](https://www.meander.cz/) • [Raketa](https://www.raketa-casopis.cz/) • [Vividbooks](https://eshop.vividbooks.com/) • [Nakladatelství UMPRUM](https://www.umprum.cz/cs/web/pro-verejnost/nakladatelstvi/vydane-tituly) • [Nakladatelství AVU](https://avu.cz/ostatni/publikace) • [Host Brno](https://www.hostbrno.cz/) • [Page Five](https://www.pagefive.com/) • [Nejkrásnější české knihy roku](https://www.muzeumliteratury.cz/nejkrasnejsi-ceske-knihy-roku) • [Spector Books](https://spectorbooks.com/catalogue/) • [Verso](https://www.versobooks.com/collections/catalog) • []()
+
+==Supplements== [Performance Lab](https://eu.performancelab.com/collections/energy) • [Gainful](https://www.gainful.com/) • [Ritual](https://ritual.com/) • [LMNT](https://drinklmnt.com/?variant=16358367199266) • [AG1](https://drinkag1.com/en-eu) • [Czech Virus](https://czechvirus.cz/) • [Reflex](https://www.reflexnutrition.cz/) • [TB12](https://tb12sports.com/) • [Klean](https://www.kleanathlete.com/) • [Thorne](https://www.thorne.com/) • [Ladder](https://ladder.sport/) • [GNC](https://www.gnc.com/)
+
+==Cosmetics== [The Ordinary](https://theordinary.com/en-de) • [Clinique](https://www.clinique.com/) • [Wyn Beauty](https://www.wynbeauty.com/) • [Fenty Beauty](https://fentybeauty.com/en-cz)
+
+==Food== [Silesian Herbalism](https://slezskebylinarstvi.cz/) • [Serenity Kids](https://myserenitykids.com/) • [U Hokynáře](https://www.instagram.com/uhokynare/) • [Bett’r](https://bettr-food.com/pages/bettr) • [M&S Food](https://www.marksandspencer.com/c/food-and-wine#intid=gnav_Food)
+
+==Tech== [Teenage Engineering](https://teenage.engineering/) • [Dyson](https://www.dyson.co.uk/en) • [Nothing](https://cz.nothing.tech/) • [Kef](https://eu.kef.com/)
+
+==Other== [British Standard Type](https://www.britishstandardtype.xyz/projects/symbol) • [Andreas Samuelsson](https://andreassamuelsson.com/) • [Damian King](https://www.damiankingdesign.com/) • [Brandon Nickerson](https://www.bnicks.com/) • [Filip Danilov](https://danilov.cz/) 
+
 ## InDesign
+
+### How To
+
+- 🔗 [Transforming multiple anchored objects at once](https://graphicdesign.stackexchange.com/questions/156200/select-multiple-anchor-object-in-text-frame-indesign-cc)
+- 🔗 [Word Spacing](https://creativepro.com/the-complete-guide-to-word-spacing/) (Paragraph>Justification>Desired)
+- 📐 **Smart Guides** not working/greyed out? [Disable](https://creativepro.com/why-is-some-feature-grayed-out-in-indesign/) “View>Snap to Document Grid”
+- _You can just copy and paste paths from Illustrator to put them in InDesign_
+
+#### Flush Space
+
+Using **Flush space** (Ins. White Space > Flush Space) with “Justify All Lines” justification setting (all equal lines icon) to create equal space between all words/characters around the flush spaces. ++Warning++: it does not work with World-Ready paragraph Composer!
+
+#### Runts
+
+Fix **dangling single characters (“==runts==”):**  
+ - Create a new character style called smth like NoBreak, all blank except check “No Break” in Basic Char. Formats  
+ - In the target paragraph style, go to GREP Style tab > New Grep Style. Under Apply Style, choose “NoBreak” and under To Text, put: **(?i)\b\w{1,2}\s**
+
+#### Fixing separations
+
+- To view them, Window>Output>Separations Preview. Set limit to 300%. They will light up in red _(for now there’s no way to make these limits a part of preflight)_.
+- If the offenders are images, open them in Photoshop. Then Edit>Convert to Profile…
+- Convert them to **ISO Coated v2 300% (ECI)**. It’s the same as regular Fogra39 but capped at 300% limit. Intent: Relative Colorimetric, check use black point compensation.
+- If you don’t have the profile, it can be [downloaded from the ECI website](https://eci.org/doku.php_id=en_downloads.html). Place it in profiles folder (/Library/ColorSync/Profiles). Restart Photoshop.  
+  [ISOcoated_v2_300_eci.icc](Attachments/050C3BE5-AC46-48CC-851D-8213A2E96882.icc)  
+
+
+#### Resetting zero point
+
+![you want the new zero point. in this example, the zero point is being set at the upper left corner ef the paze.](Attachments/8BA7FE41-5C85-402F-A8C8-51E863EC39CA.png)
+
+#### Barcode
+
+Barcodes are generated here (EAN-13):  
+[https://barcode.tec-it.com/en/EAN13?data=8595717711230](https://barcode.tec-it.com/en/EAN13?data=8595717711230)  
+Export as SVG and in Illustrator, change colour space to CMYK and outline the numbers. Then save as PDF.  
+Should be **100% K**, not CMYK  
+I usually ++embed++ the link instead of just linking.
+
+#### Preparing a file for print (cut)
+
+==NB==: Spot - Přímé; Process - Vytážkové
+
+1. Use spot colors ([how to add them to swatches](https://smallbusiness.chron.com/setting-up-spot-colors-indesign-32658.html)) for lines so they can be separated out (select correct strokes)
+   1. Create new swatch
+   2. Use spot color
+   3. Use 100% cyan or 100% magenta, name it cut or crease, use appropriately
+2. With the path selected, open Attributes and check Overprint Stroke
+3. In Acrobat, check: All tools > Use print production > Output preview  
+   ![Set Page Boxes](Attachments/2C8BE5ED-2627-4C80-B4F0-73F737DEA129.png)
+
+#### Copy the contents of one layer in a file to another file
+
+1. Open the layer SOURCE first
+2. Then open the layer TARGET file
+3. Run Script “moveLayer”. Replace “RESENI” in the script with exact source layer name.
+4. It helped to create the same-name empty layer in the ++target++ file, while locking all the other layers.  
+   [moveLayer.jsx](Attachments/BA9D1125-F297-489C-8017-886F714F3FE9.jsx)
+
+```
+/Users/XXX/Library/Preferences/Adobe InDesign/Version 21.0/en_US/Scripts/Scripts Panel
+
+```
+
+[replaceHardBreaks.jsx](Attachments/A9B70D70-9748-409C-B439-90CDA3C9A489.jsx)  
+[layerCloner.jsx](Attachments/layerCloner.jsx)
 
 ### App settings
 
@@ -57,95 +148,7 @@
 - Ctrl+Opt+R Relink
 - Shift+S Stroke options
 
-### How To
-
-- 🔗 [Transforming multiple anchored objects at once](https://graphicdesign.stackexchange.com/questions/156200/select-multiple-anchor-object-in-text-frame-indesign-cc)
-- 🔗 [Word Spacing](https://creativepro.com/the-complete-guide-to-word-spacing/) (Paragraph>Justification>Desired)
-- 📐 **Smart Guides** not working/greyed out? [Disable](https://creativepro.com/why-is-some-feature-grayed-out-in-indesign/) “View>Snap to Document Grid”
-- _You can just copy and paste paths from Illustrator to put them in InDesign_
-
-#### Flush Space
-
-Using **Flush space** (Ins. White Space > Flush Space) with “Justify All Lines” justification setting (all equal lines icon) to create equal space between all words/characters around the flush spaces. ==Warning==: it does not work with World-Ready paragraph Composer!
-
-#### Runts
-
-Fix **dangling single characters (“runts”):**  
- - Create a new character style called smth like NoBreak, all blank except check “No Break” in Basic Char. Formats  
- - In the target paragraph style, go to GREP Style tab > New Grep Style. Under Apply Style, choose “NoBreak” and under To Text, put: ```(?i)\b\w{1,2}\s```
-
-#### Fixing separations
-
-- To view them, Window>Output>Separations Preview. Set limit to 300%. They will light up in red _(for now there’s no way to make these limits a part of preflight)_.
-- If the offenders are images, open them in Photoshop. Then Edit>Convert to Profile…
-- Convert them to **ISO Coated v2 300% (ECI)**. It’s the same as regular Fogra39 but capped at 300% limit. Intent: Relative Colorimetric, check use black point compensation.
-- If you don’t have the profile, it can be [downloaded from the ECI website](https://eci.org/doku.php_id=en_downloads.html). Place it in profiles folder (```/Library/ColorSync/Profiles```). Restart Photoshop.
-[ISOcoated_v2_300_eci.icc](Attachments/050C3BE5-AC46-48CC-851D-8213A2E96882.icc)  
-
-
-#### Resetting zero point
-
-![you want the new zero point. in this example, the zero point is being set at the upper left corner ef the paze.](Attachments/8BA7FE41-5C85-402F-A8C8-51E863EC39CA.png)
-
-#### Barcode
-
-Barcodes are generated here (EAN-13):  
-[https://barcode.tec-it.com/en/EAN13?data=8595717711230](https://barcode.tec-it.com/en/EAN13?data=8595717711230)  
-Export as SVG and in Illustrator, change colour space to CMYK and outline the numbers. Then save as PDF.  
-Should be **100% K**, not CMYK nor RGB.  
-I usually ==embed== the link instead of just linking.
-
-#### Preparing a file for print (cut)
-
-==NB==: Spot - Přímé; Process - Vytážkové
-
-1. Use spot colors ([how to add them to swatches](https://smallbusiness.chron.com/setting-up-spot-colors-indesign-32658.html)) for lines so they can be separated out (select correct strokes)
-   1. Create new swatch
-   2. Use spot color
-   3. Use 100% cyan or 100% magenta, name it cut or crease, use appropriately
-2. With the path selected, open Attributes and check Overprint Stroke
-3. In Acrobat, check: All tools > Use print production > Output preview  
-   ![Set Page Boxes](Attachments/2C8BE5ED-2627-4C80-B4F0-73F737DEA129.png)
-
-#### Copy the contents of one layer in a file to another file
-
-1. Open the layer SOURCE first
-2. Then open the layer TARGET file
-3. Run Script “moveLayer”. Replace “RESENI” in the script with exact source layer name.
-4. It helped to create the same-name empty layer in the ==target== file, while locking all the other layers.  
-   [moveLayer.jsx](Attachments/BA9D1125-F297-489C-8017-886F714F3FE9.jsx)
-
-```
-/Users/XXX/Library/Preferences/Adobe InDesign/Version 21.0/en_US/Scripts/Scripts Panel
-
-```
-
-[replaceHardBreaks.jsx](Attachments/A9B70D70-9748-409C-B439-90CDA3C9A489.jsx)  
-[layerCloner.jsx](Attachments/layerCloner.jsx)
-
 ## Illustrator
-
-### App settings
-
-[AI28Settings_2. 11 1. 2024_19 53](Attachments/396E3676-9BDC-4A51-A0CE-16EE1BA0BC7A)  
-[AI_Shortcuts.kys](Attachments/6CC537FA-EF10-4B0D-A2FB-016D53FA1A15.kys)
-
-```
-Edit > Presets > Export/Import Presets. Choose Export Presets.
-
-⚠️ When Illustrator starts crashing, uninstall it along with all preferences and delete all preferences from:
-~/Library/Preferences/Adobe Illustrator <version> Settings
-~/Library/Application Support/Adobe/Adobe Illustrator version number
-
-```
-
-- Create outlines (Text): Cmd+Shift+O
-- Create outlines (Path): Cmd+Alt+O
-- Hide App: Cmd+H
-- Rect: R, Ellipse: O, Artboard: Shift+A
-- Space to CMYK: Cmd+Sh+C
-- Color Guide: Cmd+Opt+C / , (comma)
-- etc etc…
 
 ### How To
 
@@ -178,22 +181,30 @@ _To blend between 2 photos in illustrator, for example:_
 
 ```
 
-## Photoshop
-
 ### App settings
 
-[Workspace.psw](Attachments/87DAC8BB-B384-4EBC-890D-43781935A194.psw)  
-⬆️ 2/5/2025
+[AI28Settings_2. 11 1. 2024_19 53](Attachments/396E3676-9BDC-4A51-A0CE-16EE1BA0BC7A)  
+[AI_Shortcuts.kys](Attachments/6CC537FA-EF10-4B0D-A2FB-016D53FA1A15.kys)
 
 ```
-/Users/XXX/Library/Preferences/Adobe Photoshop 2025 Settings/WorkSpaces
+Edit > Presets > Export/Import Presets. Choose Export Presets.
+
+⚠️ When Illustrator starts crashing, uninstall it along with all preferences and delete all preferences from:
+~/Library/Preferences/Adobe Illustrator <version> Settings
+~/Library/Application Support/Adobe/Adobe Illustrator version number
 
 ```
 
-- Cmd+Sh+C - Contract Selection
-- Cmd+Sh+F - Feather Selection
-- Cmd+Sh+E - Expand Selection
-- Cmd+Sh+O - Smooth Selection
+- Create outlines (Text): Cmd+Shift+O
+- Create outlines (Path): Cmd+Alt+O
+- Hide App: Cmd+H
+- Rect: R, Ellipse: O, Artboard: Shift+A
+- Space to CMYK: Cmd+Sh+C
+- Color Guide: Cmd+Opt+C / , (comma)
+- etc etc…
+
+
+## Photoshop
 
 ### How To
 
@@ -239,6 +250,21 @@ Clicking the colour stop in the gradient adjustment properties and then clicking
 3. Feather the selection: Select>Modify>Feather. Set it to one pixel.
 4. Inverse selection: Cmd+Shift+I
 5. Brush away the edge halo: Choose a brush and set the color to black and the opacity to 100
+
+### App settings
+
+[Workspace.psw](Attachments/87DAC8BB-B384-4EBC-890D-43781935A194.psw)  
+⬆️ 2/5/2025
+
+```
+/Users/XXX/Library/Preferences/Adobe Photoshop 2025 Settings/WorkSpaces
+
+```
+
+- Cmd+Sh+C - Contract Selection
+- Cmd+Sh+F - Feather Selection
+- Cmd+Sh+E - Expand Selection
+- Cmd+Sh+O - Smooth Selection
 
 ## Blender
 ![OUTLINER](Attachments/F20DFBB7-967B-4F77-A5DF-5D5E6C15A565.png)  
@@ -328,7 +354,7 @@ How To (text)
 7. ![Geometry Nodes](Attachments/9559CABC-A0B2-4BFA-B89A-9AE13C582334.png)  
 ### 3D Melt Text in Blender  
 How To  
-==[https://www.youtube.com/watch?v=HsnzMZve_NU](https://www.youtube.com/watch?v=HsnzMZve_NU)==  
+++[https://www.youtube.com/watch?v=HsnzMZve_NU](https://www.youtube.com/watch?v=HsnzMZve_NU)++  
 1. file>import>svg  
 2. S to scale up, ctrl+J to join; Right click> Set origin>Origin to geometry  
 3. flip on x axis and scale up more  
