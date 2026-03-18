@@ -66,21 +66,21 @@
 
 #### Flush Space
 
-Using **Flush space** (Ins. White Space > Flush Space) with “Justify All Lines” justification setting (all equal lines icon) to create equal space between all words/characters around the flush spaces. ++Warning++: it does not work with World-Ready paragraph Composer!
+Using **Flush space** (Ins. White Space > Flush Space) with “Justify All Lines” justification setting (all equal lines icon) to create equal space between all words/characters around the flush spaces. ==Warning==: it does not work with World-Ready paragraph Composer!
 
 #### Runts
 
-Fix **dangling single characters (“==runts==”):**  
+Fix **dangling single characters (“runts”):**  
  - Create a new character style called smth like NoBreak, all blank except check “No Break” in Basic Char. Formats  
- - In the target paragraph style, go to GREP Style tab > New Grep Style. Under Apply Style, choose “NoBreak” and under To Text, put: **(?i)\b\w{1,2}\s**
+ - In the target paragraph style, go to GREP Style tab > New Grep Style. Under Apply Style, choose “NoBreak” and under To Text, put: ```(?i)\b\w{1,2}\s```
 
 #### Fixing separations
 
 - To view them, Window>Output>Separations Preview. Set limit to 300%. They will light up in red _(for now there’s no way to make these limits a part of preflight)_.
 - If the offenders are images, open them in Photoshop. Then Edit>Convert to Profile…
 - Convert them to **ISO Coated v2 300% (ECI)**. It’s the same as regular Fogra39 but capped at 300% limit. Intent: Relative Colorimetric, check use black point compensation.
-- If you don’t have the profile, it can be [downloaded from the ECI website](https://eci.org/doku.php_id=en_downloads.html). Place it in profiles folder (/Library/ColorSync/Profiles). Restart Photoshop.  
-  [ISOcoated_v2_300_eci.icc](Attachments/050C3BE5-AC46-48CC-851D-8213A2E96882.icc)  
+- If you don’t have the profile, it can be [downloaded from the ECI website](https://eci.org/doku.php_id=en_downloads.html). Place it in profiles folder (```/Library/ColorSync/Profiles```). Restart Photoshop.
+[ISOcoated_v2_300_eci.icc](Attachments/050C3BE5-AC46-48CC-851D-8213A2E96882.icc)  
 
 
 #### Resetting zero point
@@ -92,8 +92,8 @@ Fix **dangling single characters (“==runts==”):**
 Barcodes are generated here (EAN-13):  
 [https://barcode.tec-it.com/en/EAN13?data=8595717711230](https://barcode.tec-it.com/en/EAN13?data=8595717711230)  
 Export as SVG and in Illustrator, change colour space to CMYK and outline the numbers. Then save as PDF.  
-Should be **100% K**, not CMYK  
-I usually ++embed++ the link instead of just linking.
+Should be **100% K**, not CMYK nor RGB.  
+I usually ==embed== the link instead of just linking.
 
 #### Preparing a file for print (cut)
 
@@ -112,7 +112,7 @@ I usually ++embed++ the link instead of just linking.
 1. Open the layer SOURCE first
 2. Then open the layer TARGET file
 3. Run Script “moveLayer”. Replace “RESENI” in the script with exact source layer name.
-4. It helped to create the same-name empty layer in the ++target++ file, while locking all the other layers.  
+4. It helped to create the same-name empty layer in the ==target== file, while locking all the other layers.  
    [moveLayer.jsx](Attachments/BA9D1125-F297-489C-8017-886F714F3FE9.jsx)
 
 ```
@@ -328,7 +328,7 @@ How To (text)
 7. ![Geometry Nodes](Attachments/9559CABC-A0B2-4BFA-B89A-9AE13C582334.png)  
 ### 3D Melt Text in Blender  
 How To  
-++[https://www.youtube.com/watch?v=HsnzMZve_NU](https://www.youtube.com/watch?v=HsnzMZve_NU)++  
+==[https://www.youtube.com/watch?v=HsnzMZve_NU](https://www.youtube.com/watch?v=HsnzMZve_NU)==  
 1. file>import>svg  
 2. S to scale up, ctrl+J to join; Right click> Set origin>Origin to geometry  
 3. flip on x axis and scale up more  
