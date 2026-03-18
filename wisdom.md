@@ -30,25 +30,25 @@
 - 🔗 [Transforming multiple anchored objects at once](https://graphicdesign.stackexchange.com/questions/156200/select-multiple-anchor-object-in-text-frame-indesign-cc)
 - 🔗 [Word Spacing](https://creativepro.com/the-complete-guide-to-word-spacing/) (Paragraph>Justification>Desired)
 - 📐 **Smart Guides** not working/greyed out? [Disable](https://creativepro.com/why-is-some-feature-grayed-out-in-indesign/) “View>Snap to Document Grid”
-- _You can just copy and paste paths from Illustrator to put them in InDesign_
+- You can just copy and paste **paths from Illustrator** to put them in InDesign.
 
 #### Flush Space
 
-Using **Flush space** (Ins. White Space > Flush Space) with “Justify All Lines” justification setting (all equal lines icon) to create equal space between all words/characters around the flush spaces. ++Warning++: it does not work with World-Ready paragraph Composer!
+Using **Flush space** (Ins. White Space > Flush Space) with “Justify All Lines” justification setting (all equal lines icon) to create equal space between all words/characters around the flush spaces. ==Warning==: it does not work with World-Ready paragraph Composer!
 
 #### Runts
-
-Fix **dangling single characters (“==runts==”):**  
- - Create a new character style called smth like NoBreak, all blank except check “No Break” in Basic Char. Formats  
- - In the target paragraph style, go to GREP Style tab > New Grep Style. Under Apply Style, choose “NoBreak” and under To Text, put: **(?i)\b\w{1,2}\s**
+Fix these **dangling single characters:**  
+ - Create a new character style called smth like ```NoBreak```, all blank except check “No Break” in Basic Character Formats  
+ - In the target paragraph style, go to GREP Style tab > New Grep Style. Under Apply Style, choose “NoBreak” and under To Text, put: ```(?i)\b\w{1,2}\s```
 
 #### Fixing separations
 
-- To view them, Window>Output>Separations Preview. Set limit to 300%. They will light up in red _(for now there’s no way to make these limits a part of preflight)_.
+- To view them, Window>Output>Separations Preview. Set limit to 300%. They will light up in red. _For now, there’s no way to make these limits a part of preflight._
 - If the offenders are images, open them in Photoshop. Then Edit>Convert to Profile…
 - Convert them to **ISO Coated v2 300% (ECI)**. It’s the same as regular Fogra39 but capped at 300% limit. Intent: Relative Colorimetric, check use black point compensation.
-- If you don’t have the profile, it can be [downloaded from the ECI website](https://eci.org/doku.php_id=en_downloads.html). Place it in profiles folder (/Library/ColorSync/Profiles). Restart Photoshop.  
-  [ISOcoated_v2_300_eci.icc](Attachments/050C3BE5-AC46-48CC-851D-8213A2E96882.icc)  
+- If you don’t have the profile, it can be [downloaded from the ECI website](https://eci.org/doku.php_id=en_downloads.html). Place it in profiles folder (```/Library/ColorSync/Profiles```). Restart Photoshop.
+
+[Profile: ISOcoated_v2_300_eci.icc](Attachments/050C3BE5-AC46-48CC-851D-8213A2E96882.icc)  
 
 
 #### Resetting zero point
@@ -57,15 +57,13 @@ Fix **dangling single characters (“==runts==”):**
 
 #### Barcode
 
-Barcodes are generated here (EAN-13):  
-[https://barcode.tec-it.com/en/EAN13?data=8595717711230](https://barcode.tec-it.com/en/EAN13?data=8595717711230)  
-Export as SVG and in Illustrator, change colour space to CMYK and outline the numbers. Then save as PDF.  
-Should be **100% K**, not CMYK  
-I usually ++embed++ the link instead of just linking.
+Use this [barcode generator](https://freebarcodegenerator.com/) for **EAN-13**. Export as SVG and in Illustrator, change colour space to CMYK and outline the numbers. Then save as PDF.  
+Should be **100% K**, not CMYK nor RGB.
+The link can optionally be embedded in InDesign.
 
 #### Preparing a file for print (cut)
 
-==NB==: Spot - Přímé; Process - Vytážkové
+==NB==: ```Spot - Přímé; Process - Vytážkové```
 
 1. Use spot colors ([how to add them to swatches](https://smallbusiness.chron.com/setting-up-spot-colors-indesign-32658.html)) for lines so they can be separated out (select correct strokes)
    1. Create new swatch
@@ -77,23 +75,21 @@ I usually ++embed++ the link instead of just linking.
 
 #### Copy the contents of one layer in a file to another file
 
-1. Open the layer SOURCE first
-2. Then open the layer TARGET file
-3. Run Script “moveLayer”. Replace “RESENI” in the script with exact source layer name.
-4. It helped to create the same-name empty layer in the ++target++ file, while locking all the other layers.  
-   [moveLayer.jsx](Attachments/BA9D1125-F297-489C-8017-886F714F3FE9.jsx)
+1. Open the layer SOURCE first.
+2. Then open the layer TARGET file.
+3. Run Script [moveLayer.jsx](Attachments/BA9D1125-F297-489C-8017-886F714F3FE9.jsx). Replace “RESENI” in the script with exact source layer name.
+4. It helped to create the same-name empty layer in the ==target== file, while locking all the other layers to be safe.  
 
-```
-/Users/XXX/Library/Preferences/Adobe InDesign/Version 21.0/en_US/Scripts/Scripts Panel
+#### More scripts
 
-```
+📄 [replaceHardBreaks.jsx](Attachments/A9B70D70-9748-409C-B439-90CDA3C9A489.jsx)  
+📄 [layerCloner.jsx](Attachments/layerCloner.jsx)
 
-[replaceHardBreaks.jsx](Attachments/A9B70D70-9748-409C-B439-90CDA3C9A489.jsx)  
-[layerCloner.jsx](Attachments/layerCloner.jsx)
+```/Users/XXX/Library/Preferences/Adobe InDesign/Version 21.0/en_US/Scripts/Scripts Panel```
 
 ### App settings
 
-[Workspace.xml](Attachments/DBCC2BE5-A794-4F11-970F-F4C8F8E6266C.xml)  
+📄 [Workspace.xml](Attachments/DBCC2BE5-A794-4F11-970F-F4C8F8E6266C.xml)  
 ⬆️ 15/1/2026
 
 ```
@@ -101,7 +97,7 @@ I usually ++embed++ the link instead of just linking.
 
 ```
 
-[InDesign_Shortcuts.indk](Attachments/34EE9050-74F6-43E1-9392-162D6B0ACF03.indk)  
+📄 [InDesign_Shortcuts.indk](Attachments/34EE9050-74F6-43E1-9392-162D6B0ACF03.indk)  
 ⬆️ 15/1/2026
 
 ```
@@ -156,14 +152,11 @@ I usually ++embed++ the link instead of just linking.
 - [Convert **outlined stroke to single stroke**](https://graphicdesign.stackexchange.com/questions/69375/convert-outlined-stroke-to-single-stroke) _Hint_: Object → Path → Offset Path… and then delete one of the shapes
   - [Create a Group Clipping Mask in Adobe Illustrator](https://www.youtube.com/watch?v=n-NlSTrSEYg)\*\*
 - [Repeat patterns](https://helpx.adobe.com/illustrator/using/repeat-patterns-desktop.html)
+- **Release all masks:** Select All then Cmd+Alt+7. Watch out bcs this might end up in some weird stuff.
 
-#### Release all masks
+#### Transparency mask
 
-Select All then Cmd+Alt+7. Watch out bcs this might end up in some weird stuff.
-
-#### [Transparency mask](https://logosbynick.com/transparent-gradient-mask-with-illustrator/)
-
-_To blend between 2 photos in illustrator, for example:_
+To blend between 2 photos in illustrator, for example, [transparency masking](https://logosbynick.com/transparent-gradient-mask-with-illustrator/) can be used:
 
 1. Create a rectangle over the photo (or object), going from black (will be transparent) to white (will show up) then Cut it (Cmd+X)
 2. Select the photo, go to Window>Transparency & in burger icon (3 lines in the corner), you might need to press “Show Thumbnails”
@@ -174,7 +167,7 @@ _To blend between 2 photos in illustrator, for example:_
 
 #### Script to move all objects on an artboard to a new layer
 
-[artboardItemsMoveToNewLayer.jsx](Attachments/0D5FB98D-A65C-4F61-B774-ACB9A0F7CD3B.jsx)
+📄 [artboardItemsMoveToNewLayer.jsx](Attachments/0D5FB98D-A65C-4F61-B774-ACB9A0F7CD3B.jsx)
 
 ```
 /Applications/Adobe Illustrator 2026/Presets.localized/en_US/Scripts
@@ -183,8 +176,8 @@ _To blend between 2 photos in illustrator, for example:_
 
 ### App settings
 
-[AI28Settings_2. 11 1. 2024_19 53](Attachments/396E3676-9BDC-4A51-A0CE-16EE1BA0BC7A)  
-[AI_Shortcuts.kys](Attachments/6CC537FA-EF10-4B0D-A2FB-016D53FA1A15.kys)
+📄 [AI28Settings_2. 11 1. 2024_19 53](Attachments/396E3676-9BDC-4A51-A0CE-16EE1BA0BC7A)  
+📄 [AI_Shortcuts.kys](Attachments/6CC537FA-EF10-4B0D-A2FB-016D53FA1A15.kys)
 
 ```
 Edit > Presets > Export/Import Presets. Choose Export Presets.
@@ -253,7 +246,7 @@ Clicking the colour stop in the gradient adjustment properties and then clicking
 
 ### App settings
 
-[Workspace.psw](Attachments/87DAC8BB-B384-4EBC-890D-43781935A194.psw)  
+📄 [Workspace.psw](Attachments/87DAC8BB-B384-4EBC-890D-43781935A194.psw)  
 ⬆️ 2/5/2025
 
 ```
@@ -353,8 +346,7 @@ How To (text)
 6. *To increase clipping point (how fast everything disappears when you zoom out)…* In View (Viewport) **increase Clip End to 10,000**  
 7. ![Geometry Nodes](Attachments/9559CABC-A0B2-4BFA-B89A-9AE13C582334.png)  
 ### 3D Melt Text in Blender  
-How To  
-++[https://www.youtube.com/watch?v=HsnzMZve_NU](https://www.youtube.com/watch?v=HsnzMZve_NU)++  
+[How To](https://www.youtube.com/watch?v=HsnzMZve_NU)++  
 1. file>import>svg  
 2. S to scale up, ctrl+J to join; Right click> Set origin>Origin to geometry  
 3. flip on x axis and scale up more  
@@ -409,7 +401,6 @@ two fingers: rotate
 pinch: zoom  
 shift: pan (up-down)  
 *ctrl or cmd: zoom in/out (can also pinch)*  
-* watch blenderguru intro tutorial again  
 
 ## Other
 ### Czech Programmers Keyboard Mac  
