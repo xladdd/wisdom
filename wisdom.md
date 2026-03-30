@@ -171,7 +171,6 @@ To blend between 2 photos in illustrator, for example, [transparency masking](ht
 
 ```
 /Applications/Adobe Illustrator 2026/Presets.localized/en_US/Scripts
-
 ```
 
 ### App settings
@@ -185,7 +184,6 @@ Edit > Presets > Export/Import Presets. Choose Export Presets.
 ⚠️ When Illustrator starts crashing, uninstall it along with all preferences and delete all preferences from:
 ~/Library/Preferences/Adobe Illustrator <version> Settings
 ~/Library/Application Support/Adobe/Adobe Illustrator version number
-
 ```
 
 - Create outlines (Text): Cmd+Shift+O
@@ -249,7 +247,6 @@ Clicking the colour stop in the gradient adjustment properties and then clicking
 
 ```
 /Users/XXX/Library/Preferences/Adobe Photoshop 2025 Settings/WorkSpaces
-
 ```
 
 - Cmd+Sh+C - Contract Selection
@@ -258,11 +255,51 @@ Clicking the colour stop in the gradient adjustment properties and then clicking
 - Cmd+Sh+O - Smooth Selection
 
 ## Image Generation
-Freepik is not very useful. ChatGPT keeps the style consistent. But in case ChatGPT's model changed, it might be a good idea to train a style and generate images locally.
+Freepik is not very useful. ChatGPT keeps the style consistent. 
 
-Mac's M3 chip is good for generation, but not so good for training. So training can be done with Google Colab.
+In case ChatGPT changed the model drastically, it could be a good idea to train a model and generate images locally. However, the images aren't great when generated locally, and not necessarily always following the right style:
+
+**Generated with Flux.2 [klein] 4B (6-bit) on Draw Things**
+
+**Setting:**
+```
+LoRA disabled, 
+Strength Text-to-Image 100%,
+Seed: 42, 
+Image size: 1024x1024,
+Steps: 4,
+Text guidance (CFG Scale): 1,
+Sample: Euler A Trailing,
+Shift: 3
+```
+
+![img](/Attachments/0_cartoon_bear_cub_waving_and_smiling____rendered_in_a_high_quality_2d_digital_storybook_illustration_style__the_texture_is_dominated_by_soft__visible_colored_pencil_stippling_and_crayon_flecks_42.png)
+
+**Prompt:**
+```
+cartoon bear cub waving and smiling. 
+
+Rendered in a high-quality 2D digital storybook illustration style. The texture is dominated by soft, visible colored pencil stippling and crayon flecks, giving a tactile, traditional paper feel. Smooth, clean shapes but with softly textured outlines. Color palette is cozy cream and soft tan, using gentle, blended watercolor washes. No harsh 3D shading or realistic fur. Solid pure white background, with a very faint, soft grey-blue watercolor bled shadow on the floor beneath the tiny feet. Wholesome, minimal, cute character design.
+```
+
+![img](/Attachments/0_cartoon_hedgehog_waving_and_smiling____rendered_in_a_high_quality_2d_digital_storybook_illustration_style__the_texture_is_dominated_by_soft__visible_colored_pencil_stippling_and_crayon_flecks_42.png)
+
+**Prompt:**
+```
+cartoon hedgehog waving and smiling. 
+
+Rendered in a high-quality 2D digital storybook illustration style. The texture is dominated by soft, visible colored pencil stippling and crayon flecks, giving a tactile, traditional paper feel. Smooth, clean shapes but with softly textured outlines. Color palette is cozy cream and soft tan, using gentle, blended watercolor washes. No harsh 3D shading or realistic fur. Solid pure white background, with a very faint, soft grey-blue watercolor bled shadow on the floor beneath the tiny feet. Wholesome, minimal, cute character design.
+```
+
+So unless we want something super simple like that – and it's still an option! – it may be better to use ChatGPT for image generation, with the special Storybook GPT.
+
+If we must train a model and generate locally, here's how to do it:
 
 ### Model Training
+
+MacBook Pro's M3 chip is good for generation, but not so good for training. So training can be done with Google Colab.
+
+==I did not find training the model to be particularly useful==. It must also match the model that's being used locally.
 
 #### 1. Prepare Your Dataset
 Before opening Colab, get your images ready. This is 80% of the work.
@@ -301,69 +338,6 @@ lora_type: LoRA (LoCon can cause bloat for M3 chip)
 Once it finishes, check your Google Drive. You’ll find a file ending in .safetensors. 
 
 Download Epoch 15 and Epoch 20. In Draw Things, try Epoch 15 first. If it's too weak, go to 20.
-
-### Generation in Draw Things
-
-#### PROMPTING ///
-
-##### CHATGPT PROMPT
-```
-A soft children’s book illustration of a [SUBJECT], centered on a pure white background. The character has a slightly oversized head and a small, compact body with rounded, simplified shapes. The face features large glossy black eyes with bright catchlights, a small soft nose, and a warm friendly expression.
-
-The rendering uses gentle painterly shading with smooth gradients, minimal texture, and clean soft outlines. Colors are soft and slightly desaturated with subtle variation.
-
-The subject is isolated with no background elements, only a faint soft ground shadow beneath it. The overall look is cute, calm, and polished, with no sharp realism or fine detail.
-```
-**Edited**
-``
-Sampler: DPM++ 2M Trailing
-Steps: 8
-CFG: 4.5
-Resolution: 768×768
-Seed: fixed
-```
-___
-
-```
-In the 2026 version of Draw Things, there isn't a single "Magic Enhance" button that works exactly like ChatGPT’s hidden DALL-E rewriter. However, there are three "pro" ways to achieve that same high-detail expansion without you having to write 500 words yourself.
-
-1. Use the "Built-in CLIP" Expansion
-Draw Things has an often-overlooked feature that can "auto-complete" concepts based on the model's internal memory.
-
-The Trick: Instead of a long sentence, type your core subject and then use the "Interrogate" or "Describe" icon (usually a small eye or magnifying glass near the prompt box).
-
-How it helps: It will analyze your current settings and suggest descriptive keywords (like volumetric lighting, octane render, soft textures) that match the style of the model you have loaded.
-
-2. The "MCP" Bridge (The 2026 Secret)
-Since you are on a Mac, Draw Things now supports the Model Context Protocol (MCP). This allows you to link a local LLM (like a small Llama 3 or Mistral model running in an app like LM Studio or Ollama) directly to Draw Things.
-
-How to set it up: In Draw Things settings, look for External Scripting or MCP Server.
-
-The Result: You can type a simple prompt like "cute hedgehog," and the connected LLM will automatically intercept it, rewrite it into a massive "DALL-E style" descriptive paragraph, and send it back to the image generator.
-
-3. Community "Prompt Expansion" Scripts
-Draw Things now has a Scripts tab (bottom left).
-
-Click on Scripts > Community Scripts.
-
-Search for "Prompt Extender" or "Dynamic Prompts."
-
-These scripts act like a "Mini-DALL-E." You give it a basic idea, and it uses a randomizer or a tiny local text-AI to add high-fidelity descriptors (lighting, camera angle, artistic medium) automatically every time you hit generate.
-
-The "DALL-E Style" Cheat Sheet
-If you want to manually "DALL-E-ify" a prompt for Flux or SDXL in Draw Things, always use this 4-part structure:
-
-Subject: A chubby cartoon hedgehog.
-
-Action/Pose: Standing on its hind legs, waving a tiny paw with a joyful expression.
-
-Style/Medium: Rendered in a gentle, rounded hand-drawn storybook illustration style, reminiscent of high-end 3D animation.
-
-Lighting/Environment: Soft diffused morning light, pastel color palette, clean white background, 8k resolution, cinematic composition.
-
-Would you like me to find a specific MCP setup guide for your MacBook so you can get that auto-rewriting feature working?
-```
-
 
 ## Blender
 ![OUTLINER](Attachments/F20DFBB7-967B-4F77-A5DF-5D5E6C15A565.png)  
