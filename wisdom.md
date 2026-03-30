@@ -430,14 +430,11 @@ Simple, clean.
 
 ### 7) Automate tempo (your signature move)
 
-This is what you couldn’t do before:
+Top bar → right-click tempo → **Show Automation** (or ```A```).
 
-Top bar → right-click tempo → **Show Automation**
+Choose Main (on the bottom of all tracks).
 
-Draw:
-
-* Start: **65 BPM**
-* End: **70 BPM**
+Draw BPM Automation.
 
 Both tracks will:
 
@@ -452,7 +449,7 @@ On Track B (incoming track):
 * Add **EQ Three**
 * Cut **low frequencies** at the start
 
-Prevents muddy mess when both tracks overlap.
+==Prevents muddy mess when both tracks overlap.==
 
 ### Saving
 
