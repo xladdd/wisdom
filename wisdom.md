@@ -339,6 +339,139 @@ Once it finishes, check your Google Drive. You’ll find a file ending in .safet
 
 Download Epoch 15 and Epoch 20. In Draw Things, try Epoch 15 first. If it's too weak, go to 20.
 
+## Ableton Live
+
+[Ableton Live](https://www.ableton.com/en/live/) has a 30-day free trial of the high-end Suite version. Make the most of it.
+
+### Downloading tracks
+
+You can use [Monochrome](https://monochrome.tf/) to download high-quality FLACs for the mix.
+
+### 0) Create the project structure
+
+Open Ableton → Arrangement View (press **Tab** to switch views at any time)
+
+Set this up:
+
+* **Track 1 → Track A**
+* **Track 2 → Track B**
+* **Track 3 → Optional FX / later**
+
+Rename them. Keeps your head straight.
+
+### 1) Set your starting tempo
+
+Top left:
+
+* Set BPM to **65**
+
+This is your base.
+
+### 2) Import your first track
+
+Drag your song file into **Track A**
+
+Then:
+
+* Double click the clip
+* Turn **Warp ON**, Complex or Complex Pro for best quality
+* Set correct original BPM (important)
+
+If it sounds drunk → fix warp markers (just align the first downbeat properly).
+
+### 3) Split into sections (your core move)
+
+Zoom in and cut:
+
+* Put cursor where section starts
+* Press **Cmd + E** (Mac) / **Ctrl + E** (Windows)
+
+Do this for:
+
+* intro
+* groove
+* vocal
+* breakdown
+
+Now you’ve got **building blocks**.
+
+### 4) Loop each section
+
+Click a clip → in bottom panel:
+
+* Turn **Loop ON**
+* Set loop length (e.g. 4 or 8 bars)
+
+Then:
+
+* **Cmd + D** to duplicate as many times as you want
+
+Now you control time.
+
+### 5) Bring in Track B
+
+Same process on **Track B**:
+
+* Drag in
+* Warp ON
+* Set BPM correctly
+
+It will automatically follow your **65 BPM project tempo**.
+
+### 6) Create a slow transition (this is the key part)
+
+**Volume fade**:
+
+* Press **A** (automation mode)
+* On Track B → draw volume going up
+* On Track A → draw volume going down
+
+Simple, clean.
+
+### 7) Automate tempo (your signature move)
+
+This is what you couldn’t do before:
+
+Top bar → right-click tempo → **Show Automation**
+
+Draw:
+
+* Start: **65 BPM**
+* End: **70 BPM**
+
+Both tracks will:
+
+* speed up together
+* stay locked
+* sound intentional
+
+### 8) Basic cleanup (don’t skip)
+
+On Track B (incoming track):
+
+* Add **EQ Three**
+* Cut **low frequencies** at the start
+
+Prevents muddy mess when both tracks overlap.
+
+### Saving
+
+Save it as your template: File → **Save Live Set as Template**
+
+Done. Now every time you open Ableton, you start here.
+
+Otherwise, remember that audio files are not embedded but are treated like links in InDesign, so keep them all in one place.
+
+**To “package” them**: File → Collect All and Save
+
+### A couple tips
+
+* Don’t over-loop — it gets boring fast
+* If it sounds off → your warp is wrong, not your idea
+* Always align first downbeat properly (this fixes 80% of problems)
+
+⚠️ Ableton Live 12 Intro does not include Warp Complex Pro. To stretch music at a better quality without paying for Ableton Live Standard (comparison [here](https://www.ableton.com/en/live/compare-editions/)), use [PaulXStretch](https://sonosaurus.com/paulxstretch/).
+
 ## Blender
 ![OUTLINER](/tricks/Attachments/F20DFBB7-967B-4F77-A5DF-5D5E6C15A565.png)  
 ### Shortcuts  
