@@ -58,7 +58,7 @@
       });
 
       // load markdown
-      fetch("wisdom.md")
+      fetch("/tricks/wisdom.md")
         .then((res) => res.text())
         .then((md) => {
           content.innerHTML = marked.parse(md);

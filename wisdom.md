@@ -6,14 +6,14 @@
 
 🔗 [HTML to SVG](https://editsvgcode.com/)
 
-==Assets== [Mr. Mockup](https://mrmockup.com/) • [Pacdora](https://www.pacdora.com/) • []()
+==Assets== [Mr. Mockup](https://mrmockup.com/) • [Pacdora](https://www.pacdora.com/)
 
 ### Inspo
 ==General== [DIELINE](https://thedieline.com/) • [It’s Nice That](https://www.itsnicethat.com/) • [Packaging of the World](https://packagingoftheworld.com/)
 
 ==Textbook== [Fraus](https://ucebnice.fraus.cz/catalog/cs/p9940.html) • [Baobab](https://www.baobab-books.net/) • [Meander](https://www.meander.cz/) • [Raketa](https://www.raketa-casopis.cz/) • [Vividbooks](https://eshop.vividbooks.com/) • [Nakladatelství UMPRUM](https://www.umprum.cz/cs/web/pro-verejnost/nakladatelstvi/vydane-tituly) • [Nakladatelství AVU](https://avu.cz/ostatni/publikace) • [Host Brno](https://www.hostbrno.cz/) • [Page Five](https://www.pagefive.com/) • [Nejkrásnější české knihy roku](https://www.muzeumliteratury.cz/nejkrasnejsi-ceske-knihy-roku) • [Spector Books](https://spectorbooks.com/catalogue/) • [Verso](https://www.versobooks.com/collections/catalog) • []()
 
-==Supplements== [Performance Lab](https://eu.performancelab.com/collections/energy) • [Gainful](https://www.gainful.com/) • [Ritual](https://ritual.com/) • [LMNT](https://drinklmnt.com/?variant=16358367199266) • [AG1](https://drinkag1.com/en-eu) • [Czech Virus](https://czechvirus.cz/) • [Reflex](https://www.reflexnutrition.cz/) • [TB12](https://tb12sports.com/) • [Klean](https://www.kleanathlete.com/) • [Thorne](https://www.thorne.com/) • [Ladder](https://ladder.sport/) • [GNC](https://www.gnc.com/)
+==Supplements== [Performance Lab](https://eu.performancelab.com/collections/energy) • [Gainful](https://www.gainful.com/) • [Ritual](https://ritual.com/) • [LMNT](https://drinklmnt.com/?variant=16358367199266) • [AG1](https://drinkag1.com/en-eu) • [Czech Virus](https://czechvirus.cz/) • [Reflex](https://www.reflexnutrition.cz/) • [TB12](https://tb12sports.com/) • [Klean](https://www.kleanathlete.com/) • [Thorne](https://www.thorne.com/) • [Ladder](https://ladder.sport/) • [GNC](https://www.gnc.com/) • [Clearly](https://clearly.eu/)
 
 ==Cosmetics== [The Ordinary](https://theordinary.com/en-de) • [Clinique](https://www.clinique.com/) • [Wyn Beauty](https://www.wynbeauty.com/) • [Fenty Beauty](https://fentybeauty.com/en-cz)
 
@@ -38,17 +38,17 @@ Using **Flush space** (Ins. White Space > Flush Space) with “Justify All Lines
 
 #### Runts
 Fix these **dangling single characters:**  
- - Create a new character style called smth like ```NoBreak```, all blank except check “No Break” in Basic Character Formats  
+ - Create a new character style called something like ```NoBreak```, all blank except check “No Break” in Basic Character Formats  
  - In the target paragraph style, go to GREP Style tab > New Grep Style. Under Apply Style, choose “NoBreak” and under To Text, put: ```(?i)\b\w{1,2}\s```
 
 #### Fixing separations
 
 - To view them, Window>Output>Separations Preview. Set limit to 300%. They will light up in red. _For now, there’s no way to make these limits a part of preflight._
 - If the offenders are images, open them in Photoshop. Then Edit>Convert to Profile…
-- Convert them to **ISO Coated v2 300% (ECI)**. It’s the same as regular Fogra39 but capped at 300% limit. Intent: Relative Colorimetric, check use black point compensation.
+- Convert them to **ISO Coated v2 300% (ECI)**. It’s the same as regular Fogra39 but capped at 300% limit. Intent: Relative Colorimetric, check "Use black point compensation".
 - If you don’t have the profile, it can be [downloaded from the ECI website](https://eci.org/doku.php_id=en_downloads.html). Place it in profiles folder (```/Library/ColorSync/Profiles```). Restart Photoshop.
 
-[Profile: ISOcoated_v2_300_eci.icc](Attachments/050C3BE5-AC46-48CC-851D-8213A2E96882.icc)  
+📄 [Profile: ISOcoated_v2_300_eci.icc](Attachments/050C3BE5-AC46-48CC-851D-8213A2E96882.icc)  
 
 
 #### Resetting zero point
@@ -63,7 +63,7 @@ The link can optionally be embedded in InDesign.
 
 #### Preparing a file for print (cut)
 
-==NB==: ```Spot - Přímé; Process - Vytážkové```
+==💡 NB:== ```Spot - Přímé; Process - Vytážkové```
 
 1. Use spot colors ([how to add them to swatches](https://smallbusiness.chron.com/setting-up-spot-colors-indesign-32658.html)) for lines so they can be separated out (select correct strokes)
    1. Create new swatch
@@ -149,9 +149,9 @@ The link can optionally be embedded in InDesign.
 ### How To
 
 - When **Type on a Path tool** isn't showing the little grips to change the text alignment in Illustrator, it's possible you've clicked "Hide Edges" by accident, because it's very cleverly assigned the keyboard shortcut "Cmd+H". So either click it again or just disable the fucking thing in Keyboard Shortcuts altogether.
-- [Convert **outlined stroke to single stroke**](https://graphicdesign.stackexchange.com/questions/69375/convert-outlined-stroke-to-single-stroke) _Hint_: Object → Path → Offset Path… and then delete one of the shapes
-  - [Create a Group Clipping Mask in Adobe Illustrator](https://www.youtube.com/watch?v=n-NlSTrSEYg)\*\*
-- [Repeat patterns](https://helpx.adobe.com/illustrator/using/repeat-patterns-desktop.html)
+- [Convert **outlined stroke to single stroke**](https://graphicdesign.stackexchange.com/questions/69375/convert-outlined-stroke-to-single-stroke) with Object → Path → Offset Path… and then delete one of the resulting shapes.
+  - 🔗 [Create a Group Clipping Mask in Adobe Illustrator](https://www.youtube.com/watch?v=n-NlSTrSEYg)
+- 🔗 [Repeat patterns](https://helpx.adobe.com/illustrator/using/repeat-patterns-desktop.html)
 - **Release all masks:** Select All then Cmd+Alt+7. Watch out bcs this might end up in some weird stuff.
 
 #### Transparency mask
@@ -194,8 +194,6 @@ Edit > Presets > Export/Import Presets. Choose Export Presets.
 - Rect: R, Ellipse: O, Artboard: Shift+A
 - Space to CMYK: Cmd+Sh+C
 - Color Guide: Cmd+Opt+C / , (comma)
-- etc etc…
-
 
 ## Photoshop
 
@@ -258,6 +256,114 @@ Clicking the colour stop in the gradient adjustment properties and then clicking
 - Cmd+Sh+F - Feather Selection
 - Cmd+Sh+E - Expand Selection
 - Cmd+Sh+O - Smooth Selection
+
+## Image Generation
+Freepik is not very useful. ChatGPT keeps the style consistent. But in case ChatGPT's model changed, it might be a good idea to train a style and generate images locally.
+
+Mac's M3 chip is good for generation, but not so good for training. So training can be done with Google Colab.
+
+### Model Training
+
+#### 1. Prepare Your Dataset
+Before opening Colab, get your images ready. This is 80% of the work.
+
+**Quantity**: Collect 15–20 high-quality images that represent the style. I had under 50.
+
+**Variety**: If it’s a "watercolor" style, use different subjects (landscapes, people, objects) ==so the AI learns the paint style, not just one specific object==.
+
+**Format**: Square (512x512 for SD 1.5, 1024x1024 for SDXL) works best.
+
+**Caption images**: This can be done using the [Dataset Maker](https://colab.research.google.com/github/hollowstrawberry/kohya-colab/blob/main/Dataset_Maker.ipynb). It will first create a folder in Google Drive (e.g. Loras>[style name]>Dataset>). Upload the images there. Then skip to step 4, "Tag your images". Use BLIP as method and run.
+
+#### 2. Configure Your Training
+Used the [Lora trainer](https://colab.research.google.com/github/uYouUs/kohya-colab/blob/main/Lora_Trainer.ipynb).
+
+**Connect to a GPU**: Go to Runtime > Change runtime type and ensure T4 GPU (or better) is selected.
+
+**Project Name:** Use same name as when captioning images. You don't have to upload again, it uses the same folder.
+
+**Pretrained Model:** Choose stable-diffusion-v1-5 (best for your 8GB Mac later) or SDXL if you want higher quality.
+
+**Trigger Word:** This is the word you'll type to activate the style (e.g., in_cool_style). Use something unique.
+
+**The Setup**:
+Images: 48
+Repeats: 2 (This tells the AI to look at each image twice per round)
+Epochs: 20 to 25
+Batch Size: 1 (Best for quality)
+The Math: 48 x 2 x 25 = 2,400 total steps.
+Network Dim/Alpha: 16 / 8
+Unets Learning Rate: 0.0001 (or 1e-4)
+Text Encoder Learning Rate: 0.00005 (or 5e-5)
+lora_type: LoRA (LoCon can cause bloat for M3 chip)
+
+#### 3. Download and Use
+Once it finishes, check your Google Drive. You’ll find a file ending in .safetensors. 
+
+Download Epoch 15 and Epoch 20. In Draw Things, try Epoch 15 first. If it's too weak, go to 20.
+
+### Generation in Draw Things
+
+#### PROMPTING ///
+
+##### CHATGPT PROMPT
+```
+A soft children’s book illustration of a [SUBJECT], centered on a pure white background. The character has a slightly oversized head and a small, compact body with rounded, simplified shapes. The face features large glossy black eyes with bright catchlights, a small soft nose, and a warm friendly expression.
+
+The rendering uses gentle painterly shading with smooth gradients, minimal texture, and clean soft outlines. Colors are soft and slightly desaturated with subtle variation.
+
+The subject is isolated with no background elements, only a faint soft ground shadow beneath it. The overall look is cute, calm, and polished, with no sharp realism or fine detail.
+```
+**Edited**
+``
+Sampler: DPM++ 2M Trailing
+Steps: 8
+CFG: 4.5
+Resolution: 768×768
+Seed: fixed
+```
+___
+
+```
+In the 2026 version of Draw Things, there isn't a single "Magic Enhance" button that works exactly like ChatGPT’s hidden DALL-E rewriter. However, there are three "pro" ways to achieve that same high-detail expansion without you having to write 500 words yourself.
+
+1. Use the "Built-in CLIP" Expansion
+Draw Things has an often-overlooked feature that can "auto-complete" concepts based on the model's internal memory.
+
+The Trick: Instead of a long sentence, type your core subject and then use the "Interrogate" or "Describe" icon (usually a small eye or magnifying glass near the prompt box).
+
+How it helps: It will analyze your current settings and suggest descriptive keywords (like volumetric lighting, octane render, soft textures) that match the style of the model you have loaded.
+
+2. The "MCP" Bridge (The 2026 Secret)
+Since you are on a Mac, Draw Things now supports the Model Context Protocol (MCP). This allows you to link a local LLM (like a small Llama 3 or Mistral model running in an app like LM Studio or Ollama) directly to Draw Things.
+
+How to set it up: In Draw Things settings, look for External Scripting or MCP Server.
+
+The Result: You can type a simple prompt like "cute hedgehog," and the connected LLM will automatically intercept it, rewrite it into a massive "DALL-E style" descriptive paragraph, and send it back to the image generator.
+
+3. Community "Prompt Expansion" Scripts
+Draw Things now has a Scripts tab (bottom left).
+
+Click on Scripts > Community Scripts.
+
+Search for "Prompt Extender" or "Dynamic Prompts."
+
+These scripts act like a "Mini-DALL-E." You give it a basic idea, and it uses a randomizer or a tiny local text-AI to add high-fidelity descriptors (lighting, camera angle, artistic medium) automatically every time you hit generate.
+
+The "DALL-E Style" Cheat Sheet
+If you want to manually "DALL-E-ify" a prompt for Flux or SDXL in Draw Things, always use this 4-part structure:
+
+Subject: A chubby cartoon hedgehog.
+
+Action/Pose: Standing on its hind legs, waving a tiny paw with a joyful expression.
+
+Style/Medium: Rendered in a gentle, rounded hand-drawn storybook illustration style, reminiscent of high-end 3D animation.
+
+Lighting/Environment: Soft diffused morning light, pastel color palette, clean white background, 8k resolution, cinematic composition.
+
+Would you like me to find a specific MCP setup guide for your MacBook so you can get that auto-rewriting feature working?
+```
+
 
 ## Blender
 ![OUTLINER](Attachments/F20DFBB7-967B-4F77-A5DF-5D5E6C15A565.png)  
