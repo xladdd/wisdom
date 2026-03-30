@@ -273,7 +273,7 @@ Sample: Euler A Trailing,
 Shift: 3
 ```
 
-![img](/Attachments/0_cartoon_bear_cub_waving_and_smiling____rendered_in_a_high_quality_2d_digital_storybook_illustration_style__the_texture_is_dominated_by_soft__visible_colored_pencil_stippling_and_crayon_flecks_42.png)
+![img](Attachments/0_cartoon_bear_cub_waving_and_smiling____rendered_in_a_high_quality_2d_digital_storybook_illustration_style__the_texture_is_dominated_by_soft__visible_colored_pencil_stippling_and_crayon_flecks_42.png)
 
 **Prompt:**
 ```
@@ -282,7 +282,7 @@ cartoon bear cub waving and smiling.
 Rendered in a high-quality 2D digital storybook illustration style. The texture is dominated by soft, visible colored pencil stippling and crayon flecks, giving a tactile, traditional paper feel. Smooth, clean shapes but with softly textured outlines. Color palette is cozy cream and soft tan, using gentle, blended watercolor washes. No harsh 3D shading or realistic fur. Solid pure white background, with a very faint, soft grey-blue watercolor bled shadow on the floor beneath the tiny feet. Wholesome, minimal, cute character design.
 ```
 
-![img](/Attachments/0_cartoon_hedgehog_waving_and_smiling____rendered_in_a_high_quality_2d_digital_storybook_illustration_style__the_texture_is_dominated_by_soft__visible_colored_pencil_stippling_and_crayon_flecks_42.png)
+![img](Attachments/0_cartoon_hedgehog_waving_and_smiling____rendered_in_a_high_quality_2d_digital_storybook_illustration_style__the_texture_is_dominated_by_soft__visible_colored_pencil_stippling_and_crayon_flecks_42.png)
 
 **Prompt:**
 ```
