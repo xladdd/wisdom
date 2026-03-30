@@ -48,12 +48,12 @@ Fix these **dangling single characters:**
 - Convert them to **ISO Coated v2 300% (ECI)**. It’s the same as regular Fogra39 but capped at 300% limit. Intent: Relative Colorimetric, check "Use black point compensation".
 - If you don’t have the profile, it can be [downloaded from the ECI website](https://eci.org/doku.php_id=en_downloads.html). Place it in profiles folder (```/Library/ColorSync/Profiles```). Restart Photoshop.
 
-📄 [Profile: ISOcoated_v2_300_eci.icc](Attachments/050C3BE5-AC46-48CC-851D-8213A2E96882.icc)  
+📄 [Profile: ISOcoated_v2_300_eci.icc](/tricks/Attachments/050C3BE5-AC46-48CC-851D-8213A2E96882.icc)  
 
 
 #### Resetting zero point
 
-![you want the new zero point. in this example, the zero point is being set at the upper left corner ef the paze.](Attachments/8BA7FE41-5C85-402F-A8C8-51E863EC39CA.png)
+![you want the new zero point. in this example, the zero point is being set at the upper left corner ef the paze.](/tricks/Attachments/8BA7FE41-5C85-402F-A8C8-51E863EC39CA.png)
 
 #### Barcode
 
@@ -71,25 +71,25 @@ The link can optionally be embedded in InDesign.
    3. Use 100% cyan or 100% magenta, name it cut or crease, use appropriately
 2. With the path selected, open Attributes and check Overprint Stroke
 3. In Acrobat, check: All tools > Use print production > Output preview  
-   ![Set Page Boxes](Attachments/2C8BE5ED-2627-4C80-B4F0-73F737DEA129.png)
+   ![Set Page Boxes](/tricks/Attachments/2C8BE5ED-2627-4C80-B4F0-73F737DEA129.png)
 
 #### Copy the contents of one layer in a file to another file
 
 1. Open the layer SOURCE first.
 2. Then open the layer TARGET file.
-3. Run Script [moveLayer.jsx](Attachments/BA9D1125-F297-489C-8017-886F714F3FE9.jsx). Replace “RESENI” in the script with exact source layer name.
+3. Run Script [moveLayer.jsx](/tricks/Attachments/BA9D1125-F297-489C-8017-886F714F3FE9.jsx). Replace “RESENI” in the script with exact source layer name.
 4. It helped to create the same-name empty layer in the ==target== file, while locking all the other layers to be safe.  
 
 #### More scripts
 
-📄 [replaceHardBreaks.jsx](Attachments/A9B70D70-9748-409C-B439-90CDA3C9A489.jsx)  
-📄 [layerCloner.jsx](Attachments/layerCloner.jsx)
+📄 [replaceHardBreaks.jsx](/tricks/Attachments/A9B70D70-9748-409C-B439-90CDA3C9A489.jsx)  
+📄 [layerCloner.jsx](/tricks/Attachments/layerCloner.jsx)
 
 ```/Users/XXX/Library/Preferences/Adobe InDesign/Version 21.0/en_US/Scripts/Scripts Panel```
 
 ### App settings
 
-📄 [Workspace.xml](Attachments/DBCC2BE5-A794-4F11-970F-F4C8F8E6266C.xml)  
+📄 [Workspace.xml](/tricks/Attachments/DBCC2BE5-A794-4F11-970F-F4C8F8E6266C.xml)  
 ⬆️ 15/1/2026
 
 ```
@@ -97,7 +97,7 @@ The link can optionally be embedded in InDesign.
 
 ```
 
-📄 [InDesign_Shortcuts.indk](Attachments/34EE9050-74F6-43E1-9392-162D6B0ACF03.indk)  
+📄 [InDesign_Shortcuts.indk](/tricks/Attachments/34EE9050-74F6-43E1-9392-162D6B0ACF03.indk)  
 ⬆️ 15/1/2026
 
 ```
@@ -167,7 +167,7 @@ To blend between 2 photos in illustrator, for example, [transparency masking](ht
 
 #### Script to move all objects on an artboard to a new layer
 
-📄 [artboardItemsMoveToNewLayer.jsx](Attachments/0D5FB98D-A65C-4F61-B774-ACB9A0F7CD3B.jsx)
+📄 [artboardItemsMoveToNewLayer.jsx](/tricks/Attachments/0D5FB98D-A65C-4F61-B774-ACB9A0F7CD3B.jsx)
 
 ```
 /Applications/Adobe Illustrator 2026/Presets.localized/en_US/Scripts
@@ -175,8 +175,8 @@ To blend between 2 photos in illustrator, for example, [transparency masking](ht
 
 ### App settings
 
-📄 [AI28Settings_2. 11 1. 2024_19 53](Attachments/396E3676-9BDC-4A51-A0CE-16EE1BA0BC7A)  
-📄 [AI_Shortcuts.kys](Attachments/6CC537FA-EF10-4B0D-A2FB-016D53FA1A15.kys)
+📄 [AI28Settings_2. 11 1. 2024_19 53](/tricks/Attachments/396E3676-9BDC-4A51-A0CE-16EE1BA0BC7A)  
+📄 [AI_Shortcuts.kys](/tricks/Attachments/6CC537FA-EF10-4B0D-A2FB-016D53FA1A15.kys)
 
 ```
 Edit > Presets > Export/Import Presets. Choose Export Presets.
@@ -242,7 +242,7 @@ Clicking the colour stop in the gradient adjustment properties and then clicking
 
 ### App settings
 
-📄 [Workspace.psw](Attachments/87DAC8BB-B384-4EBC-890D-43781935A194.psw)  
+📄 [Workspace.psw](/tricks/Attachments/87DAC8BB-B384-4EBC-890D-43781935A194.psw)  
 ⬆️ 2/5/2025
 
 ```
@@ -273,7 +273,7 @@ Sample: Euler A Trailing,
 Shift: 3
 ```
 
-![img](Attachments/0_cartoon_bear_cub_waving_and_smiling____rendered_in_a_high_quality_2d_digital_storybook_illustration_style__the_texture_is_dominated_by_soft__visible_colored_pencil_stippling_and_crayon_flecks_42.png)
+![img](/tricks/Attachments/0_cartoon_bear_cub_waving_and_smiling____rendered_in_a_high_quality_2d_digital_storybook_illustration_style__the_texture_is_dominated_by_soft__visible_colored_pencil_stippling_and_crayon_flecks_42.png)
 
 **Prompt:**
 ```
@@ -282,7 +282,7 @@ cartoon bear cub waving and smiling.
 Rendered in a high-quality 2D digital storybook illustration style. The texture is dominated by soft, visible colored pencil stippling and crayon flecks, giving a tactile, traditional paper feel. Smooth, clean shapes but with softly textured outlines. Color palette is cozy cream and soft tan, using gentle, blended watercolor washes. No harsh 3D shading or realistic fur. Solid pure white background, with a very faint, soft grey-blue watercolor bled shadow on the floor beneath the tiny feet. Wholesome, minimal, cute character design.
 ```
 
-![img](Attachments/0_cartoon_hedgehog_waving_and_smiling____rendered_in_a_high_quality_2d_digital_storybook_illustration_style__the_texture_is_dominated_by_soft__visible_colored_pencil_stippling_and_crayon_flecks_42.png)
+![img](/tricks/Attachments/0_cartoon_hedgehog_waving_and_smiling____rendered_in_a_high_quality_2d_digital_storybook_illustration_style__the_texture_is_dominated_by_soft__visible_colored_pencil_stippling_and_crayon_flecks_42.png)
 
 **Prompt:**
 ```
@@ -340,7 +340,7 @@ Once it finishes, check your Google Drive. You’ll find a file ending in .safet
 Download Epoch 15 and Epoch 20. In Draw Things, try Epoch 15 first. If it's too weak, go to 20.
 
 ## Blender
-![OUTLINER](Attachments/F20DFBB7-967B-4F77-A5DF-5D5E6C15A565.png)  
+![OUTLINER](/tricks/Attachments/F20DFBB7-967B-4F77-A5DF-5D5E6C15A565.png)  
 ### Shortcuts  
 Tab – Switch Edit/Object Mode  
 Shift+Tab – Snapping on/off  
@@ -422,9 +422,9 @@ How To (text)
 2. Set Unit Scale to **0.001**  
 3. Set Length to **mm**  
 4. *To bring grid back… *Go to Viewport Overlays & **change Scale to 0.001**  
-5. ![ompositing](Attachments/2A1CE230-4BD6-4FD3-A5E6-451394891229.png)  
+5. ![ompositing](/tricks/Attachments/2A1CE230-4BD6-4FD3-A5E6-451394891229.png)  
 6. *To increase clipping point (how fast everything disappears when you zoom out)…* In View (Viewport) **increase Clip End to 10,000**  
-7. ![Geometry Nodes](Attachments/9559CABC-A0B2-4BFA-B89A-9AE13C582334.png)  
+7. ![Geometry Nodes](/tricks/Attachments/9559CABC-A0B2-4BFA-B89A-9AE13C582334.png)  
 ### 3D Melt Text in Blender  
 [How To](https://www.youtube.com/watch?v=HsnzMZve_NU)++  
 1. file>import>svg  
